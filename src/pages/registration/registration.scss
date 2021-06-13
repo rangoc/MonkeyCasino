@@ -1,0 +1,98 @@
+@import '../../includeMedia.scss';
+
+$breakpoints: (
+  phone: 320px,
+  tablet: 880px,
+);
+
+.registration {
+  width: 90%;
+  height: 100%;
+  max-width: 1000px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.75rem;
+  box-shadow: -30px 50px 70px rgba(0, 0, 0, 0.75);
+  background: linear-gradient(to top right, rgb(21, 22, 21), rgb(68, 68, 67));
+  @include media('>=phone', '<=450px') {
+    width: 100%;
+  }
+  .registrationHeader {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background: linear-gradient(
+      to top right,
+      rgb(44, 116, 22),
+      rgb(219, 177, 38)
+    );
+    border-radius: 0.75rem 0.75rem 0 0;
+    .waveWrapper {
+      width: 100%;
+      height: 100%;
+    }
+    .monkeyWrapper {
+      position: absolute;
+      margin-left: 30px;
+      img {
+        height: 75px;
+        width: 75px;
+      }
+    }
+    .title {
+      position: absolute;
+      width: 500px;
+      color: white;
+      left: 50%;
+      margin-left: -250px;
+      text-align: center;
+    }
+  }
+
+  .contentWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include media('>=phone', '<=tablet') {
+      flex-direction: column;
+    }
+    .graphics {
+      display: flex;
+      height: 100%;
+      flex: 50%;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 0.75rem 0 0 0.75rem;
+    }
+    .content {
+      position: relative;
+      flex: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      border-radius: 0.75rem 0.75rem 0.75rem 0.75rem;
+      color: white;
+      @include media('>=phone', '<=400px') {
+        padding: 1rem;
+      }
+      .description {
+        margin-bottom: 2rem;
+        background-image: linear-gradient(
+          to top right,
+          rgb(42, 240, 85),
+          rgb(241, 241, 60)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+      }
+    }
+  }
+}

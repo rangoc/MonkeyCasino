@@ -1,0 +1,55 @@
+@import '../../../includeMedia.scss';
+
+$breakpoints: (
+  phone: 320px,
+);
+
+.formWrapper {
+  width: 100%;
+  text-align: right;
+  .personalInfo-hidden {
+    display: none;
+  }
+  .credentials-hidden {
+    display: none;
+  }
+  .goal {
+    display: flex;
+    text-align: left;
+  }
+  .buttonsContainer {
+    button {
+      width: 150px;
+      height: 40px;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.75rem;
+      border: none;
+      cursor: pointer;
+      background: white;
+
+      color: rgb(0, 0, 0);
+      // color: white;
+      font-size: 0.85rem;
+      border: 1px solid rgb(85, 84, 84);
+      box-shadow: -1px 3px 5px rgb(39, 38, 38);
+      text-transform: uppercase;
+      transition: all ease-out 0.5s;
+      @include media('>=phone', '<=440px') {
+        width: 100px;
+      }
+      &:hover {
+        color: white;
+        background: rgb(38, 133, 26);
+        box-shadow: -2px 3px 1px rgb(39, 38, 38);
+      }
+    }
+    button:disabled,
+    button[type='submit']:disabled {
+      background: gray;
+      color: black;
+    }
+    > button:nth-child(2) {
+      margin-left: 30px;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import '../../includeMedia.scss';
+
+$breakpoints: (
+  phone: 320px,
+);
+
+.stepper {
+  margin: 20px 0 70px 0;
+  display: flex;
+  justify-content: space-between;
+
+  .step-wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .divider-line {
+      height: 1px;
+      background-color: #bdbdbd;
+      position: absolute;
+      width: 80%;
+      top: 20%;
+      left: 60%;
+      transition: all ease-in 0.3s;
+      @include media('>=phone', '<=400px') {
+        width: 72%;
+        left: 65%;
+      }
+    }
+    .divider-line-active {
+      background: linear-gradient(
+        to right,
+        rgb(38, 133, 26),
+        rgb(194, 194, 78)
+      );
+    }
+    .step-number {
+      border-radius: 50%;
+      border: 1px solid grey;
+      width: 30px;
+      height: 30px;
+      padding: 2px;
+      text-align: center;
+      margin-bottom: 1.2rem;
+      transition: all ease-out 0.5s;
+    }
+    .step-number-selected {
+      background: white;
+      border: 1px solid #bdbdbd;
+      color: black;
+    }
+    .step-number-disabled {
+      border: 1px solid #838383;
+      // background: #838383;
+    }
+    .step-number-completed {
+      background: rgb(38, 133, 26);
+      border: 1px solid #ffffff;
+      color: white;
+    }
+  }
+  .step-description {
+    @include media('>=phone', '<=400px') {
+      font-size: 12px;
+    }
+  }
+  .step-description-active {
+    font-weight: 700;
+  }
+}

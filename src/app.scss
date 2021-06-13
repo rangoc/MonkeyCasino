@@ -1,0 +1,19 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    to top right,
+    rgb(17, 105, 36),
+    rgb(206, 206, 29)
+  );
+
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('assets/monkey.png');
+    background-position: bottom right;
+    background-repeat: repeat-x;
+  }
+}
