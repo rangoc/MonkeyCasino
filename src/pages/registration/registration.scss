@@ -43,14 +43,6 @@ $breakpoints: (
         width: 75px;
       }
     }
-    .title {
-      position: absolute;
-      width: 500px;
-      color: white;
-      left: 50%;
-      margin-left: -250px;
-      text-align: center;
-    }
   }
 
   .contentWrapper {
@@ -77,6 +69,10 @@ $breakpoints: (
       padding: 2rem;
       border-radius: 0.75rem 0.75rem 0.75rem 0.75rem;
       color: white;
+      @include media('>=phone', '<=tablet') {
+        width: 100%;
+        align-items: center;
+      }
       @include media('>=phone', '<=400px') {
         padding: 1rem;
       }

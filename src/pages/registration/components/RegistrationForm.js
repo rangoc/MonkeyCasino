@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useFormikContext } from 'formik';
+import { MultiLanguageSupportContext } from 'context/MultiLanguageSupportProvider';
+
+// components
 import Stepper from 'components/stepper/Stepper';
 import PasswordField from 'components/form/PasswordField';
 import TextField from 'components/form/TextField';
@@ -25,9 +28,13 @@ const RegistrationForm = ({ isRegistrationComplete }) => {
   }, [isRegistrationComplete.completed]);
 
   const { values, errors, isSubmitting } = useFormikContext();
-
+  const { t } = useContext(MultiLanguageSupportContext);
   // Stepper state management
-  const stepsArray = ['Personal Info', `Credentials`, 'Goal'];
+  const stepsArray = [
+    t('step-personalInfo'),
+    t('step-credentials'),
+    t('step-goal'),
+  ];
   const [currentStep, setCurrentStep] = useState(StepperValues.personalInfo);
 
   // Stepper click handler
@@ -61,11 +68,11 @@ const RegistrationForm = ({ isRegistrationComplete }) => {
       <div className="buttonsContainer">
         {currentStep === StepperValues.credentials && (
           <button type="button" onClick={handleClick}>
-            Previous
+            {t('button-previous')}
           </button>
         )}
         {currentStep === StepperValues.credentials && (
-          <SubmitButton title="Submit" />
+          <SubmitButton title={t('button-submit')} />
         )}
         {currentStep === StepperValues.personalInfo && (
           <button
@@ -78,7 +85,7 @@ const RegistrationForm = ({ isRegistrationComplete }) => {
               errors.hasOwnProperty('lname')
             }
           >
-            Next
+            {t('button-next')}
           </button>
         )}
       </div>

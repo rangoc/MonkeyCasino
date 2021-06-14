@@ -1,19 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { MultiLanguageSupportContext } from 'context/MultiLanguageSupportProvider';
+// components
 import FormWrapper from 'components/form/FormWrapper';
 import RegistrationForm from './components/RegistrationForm';
+import LanguagePicker from 'components/languagePicker/LanguagePicker';
 import Lottie from 'react-lottie-player';
+
+// hooks
 import useFormAndValidation from './hooks/useFormAndValidation';
 // assets
 import monkey from 'assets/monkeyLogo.png';
 import wave from 'assets/wave.svg';
+
 // lotties
 import dice from 'assets/lotties/dice';
 import money from 'assets/lotties/money';
-//css
+// css
 import './registration.scss';
 const Registration = () => {
+  const { t } = useContext(MultiLanguageSupportContext);
+
   const [formData, validationSchema] = useFormAndValidation();
-  console.log(formData, validationSchema);
 
   // used when user succesfully registers
   const [isRegistrationComplete, setIsRegistrationComplete] = useState({
@@ -59,7 +66,7 @@ const Registration = () => {
       if (success) {
         setIsRegistrationComplete({
           completed: true,
-          message: 'Congratulations! Registration was successful!',
+          message: t('congratulation-message'),
         });
       }
     } catch ({ info: { success } }) {
@@ -79,6 +86,7 @@ const Registration = () => {
         <div className="monkeyWrapper">
           <img src={monkey} alt="monkey" />
         </div>
+        <LanguagePicker />
       </div>
       <div className="contentWrapper">
         <div className="graphics">
@@ -99,9 +107,7 @@ const Registration = () => {
           )}
         </div>
         <div className="content">
-          <h2 className="description">
-            Get started with us today in 2 easy steps!
-          </h2>
+          <h2 className="description">{t('registration-title')}</h2>
           <FormWrapper
             enableReinitialize
             validationSchema={validationSchema}

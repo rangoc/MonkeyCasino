@@ -1,6 +1,7 @@
 import React from 'react';
 import './app.scss';
 import Registration from 'pages/registration/Registration';
+
 const App = () => {
   return (
     <div className="app">

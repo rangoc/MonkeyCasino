@@ -2,6 +2,7 @@
 
 $breakpoints: (
   phone: 320px,
+  tablet: 880px,
 );
 
 .stepper {
@@ -24,6 +25,10 @@ $breakpoints: (
       top: 20%;
       left: 60%;
       transition: all ease-in 0.3s;
+      @include media('>=phone', '<=tablet') {
+        width: 86%;
+        left: 57%;
+      }
       @include media('>=phone', '<=400px') {
         width: 72%;
         left: 65%;
