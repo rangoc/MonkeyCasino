@@ -3,12 +3,12 @@
 
 # Screenshots: 
 ###### Desktop:  
-[First step](https://i.imgur.com/ekbSTuM.png)  
-[Second step](https://i.imgur.com/Ma4Etjl.png)  
-[Registration in process](https://i.imgur.com/Y4QGcoT.png)  
-[Goal](https://i.imgur.com/M9qHulY.png)  
+[![first-Step.png](https://i.postimg.cc/j5znDNT1/first-Step.png)](https://postimg.cc/hzttwXf8)
+[![second-Step.png](https://i.postimg.cc/SNQYKJvZ/second-Step.png)](https://postimg.cc/rzbwnFcW) 
+[![registration-Process.png](https://i.postimg.cc/NGkrY1p9/registration-Process.png)](https://postimg.cc/xqqd3brn)
+[![goal.png](https://i.postimg.cc/90b4phrt/goal.png)](https://postimg.cc/GTBhL6PH)  
 ###### Mobile
-[First step](https://i.imgur.com/JeHQDCB.png)
+[![mobile.png](https://i.postimg.cc/brpDkJNw/mobile.png)](https://postimg.cc/hzZtqKdk)
 
 # How to run
 `git clone` the project locally  
@@ -105,13 +105,5 @@ I will try to keep this one short, and just give the general overview of functio
 ├── yarn-error.log
 └── yarn.lock
 ```
-Inside of App component, I am rendering `Registration` component from [pages/registration](https://github.com/rangoc/Registration-Form/tree/main/src/pages/registration), which is using a custom hook `useFormAndValidation`, and that hook is returning ( after first parsing [json schema](https://github.com/rangoc/Registration-Form/blob/main/src/sampleData.json) ) `formData` and `validationSchema`, first one being used as `initialValues`, second one being used as `validationSchema`, for a [FormWrapper](https://github.com/rangoc/Registration-Form/blob/main/src/pages/registration/Registration.js#L112) component (using under the hud Formik - form & forms field library with it's own interal context api management and has great support for Yup validation library). Inside of `FormWrapper` component is [RegistrationForm](https://github.com/rangoc/Registration-Form/blob/9ea8d809dc469f62e9f3b33d9e55a9214728734d/src/pages/registration/components/RegistrationForm.js#L23) component which is used for generating dynamically form fields. 
-For implementation of  [LanguagePicker](https://github.com/rangoc/Registration-Form/blob/main/src/pages/registration/Registration.js#L90) ( switcher ) component , i18next & react-i18next libraries were used under the hud, but in order to make component really reusable I implemented a context api of my own [MultiLanguageSupport](https://github.com/rangoc/Registration-Form/blob/9ea8d809dc469f62e9f3b33d9e55a9214728734d/src/context/MultiLanguageSupportProvider.js). 
-
-
-
-
-
-
-
-
+Inside of App component, I am rendering `Registration` component from [pages/registration](https://github.com/rangoc/Registration-Form/tree/main/src/pages/registration), which is using a custom hook `useFormAndValidation`, and that hook is returning ( after first parsing [json schema](https://github.com/rangoc/Registration-Form/blob/main/src/sampleData.json) ) `formData` and `validationSchema`, first one being used as `initialValues`, second one being used as `validationSchema`, for a [FormWrapper](https://github.com/rangoc/Registration-Form/blob/main/src/pages/registration/Registration.js#L112) component (using under the hood Formik - form & forms field library with it's own interal context api management and has great support for Yup validation library). Inside of `FormWrapper` component is [RegistrationForm](https://github.com/rangoc/Registration-Form/blob/9ea8d809dc469f62e9f3b33d9e55a9214728734d/src/pages/registration/components/RegistrationForm.js#L23) component which is used for generating dynamically form fields. 
+For implementation of  [LanguagePicker](https://github.com/rangoc/Registration-Form/blob/main/src/pages/registration/Registration.js#L90) ( switcher ) component , i18next & react-i18next libraries were used under the hood, but in order to make component really reusable I implemented a context api of my own [MultiLanguageSupport](https://github.com/rangoc/Registration-Form/blob/9ea8d809dc469f62e9f3b33d9e55a9214728734d/src/context/MultiLanguageSupportProvider.js). 
