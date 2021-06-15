@@ -1,4 +1,4 @@
-# Demo: 
+# Demo 	:monkey_face:: 
 [Monkey Casino](https://monkey-casino-registration.netlify.app/)
 
 # Screenshots: 
@@ -16,7 +16,7 @@
 `yarn start` to run the project in your browser
 
 
-# Project overview ( Monkey Casino )
+# Project overview ( Monkey Casino 	:monkey_face:)
 #### Functional requirements:
 The client required a multi-step registration form with dynamic input fields and dynamic validation built from a sample [json schema](https://github.com/rangoc/Registration-Form/blob/main/src/sampleData.json) replicating the type of data structure that will be sent from their own backend server. The requirements for multi-step validation were that a user could not go to the second step of registration without first completing the first, and that there should be a visual "approval" when they did so. A language switch should also be implemented, allowing you to select from two alternatives (currently): `English` or `Croatian`. On all screen sizes: mobile, tablet, laptop, and desktop, the form should be responsive and look well.
 
