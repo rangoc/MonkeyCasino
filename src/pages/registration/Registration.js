@@ -58,6 +58,7 @@ const Registration = () => {
   // Form submit handler
   const onSubmit = async (values, { setSubmitting }) => {
     const data = formatDataForAPI(values); // data to be sent to backend in appropriate format
+    // console.log(data);
     setSubmitting(true);
     try {
       const {
