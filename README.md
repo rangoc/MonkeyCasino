@@ -1,15 +1,6 @@
 # Demo 	:monkey_face: 
 [Monkey Casino](https://monkey-casino-registration.netlify.app/)
 
-# Screenshots 
-###### Desktop:  
-[![first-Step.png](https://i.postimg.cc/j5znDNT1/first-Step.png)](https://postimg.cc/hzttwXf8)
-[![second-Step.png](https://i.postimg.cc/SNQYKJvZ/second-Step.png)](https://postimg.cc/rzbwnFcW) 
-[![registration-Process.png](https://i.postimg.cc/NGkrY1p9/registration-Process.png)](https://postimg.cc/xqqd3brn)
-[![goal.png](https://i.postimg.cc/90b4phrt/goal.png)](https://postimg.cc/GTBhL6PH)  
-###### Mobile
-[![mobile.png](https://i.postimg.cc/brpDkJNw/mobile.png)](https://postimg.cc/hzZtqKdk)
-
 # How to run
 `git clone` the project locally  
 `yarn install` to install all the dependencies  
