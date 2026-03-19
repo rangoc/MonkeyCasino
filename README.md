@@ -1,4 +1,4 @@
-# Demo 	:monkey_face: 
+# Demo :monkey_face: 
 [Monkey Casino](https://monkey-casino-registration.netlify.app/)
 
 # How to run
